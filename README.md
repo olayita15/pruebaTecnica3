@@ -17,9 +17,10 @@
   <li><strong>office:</strong> A foreign key to the <strong>Office</strong> model, representing the office where the employee works.</li>
 </ul>
 <h2>Usage</h2>
-<p>To run the application locally, you will need to have Python and Django installed on your machine. Once you have cloned the repository, navigate to the project directory and run the following command:</p>
-<pre><code>python manage.py runserver</code></pre>
-<p>This will start the Django development server, and you can access the application by navigating to <a href="http://localhost:8000/">http://localhost:8000/</a> in your web browser.</p>
+<p>To run the application locally, you will need to have Python and Django installed on your machine. Once you have cloned the repository, navigate to the project directory and run the following commands:</p>
+<pre><code>pip install -r requirements.txt
+python manage.py runserver</code></pre>
+<p>This will install all the necessary dependencies and start the Django development server. You can then access the application by navigating to <a href="http://localhost:8000/">http://localhost:8000/</a> in your web browser.</p>
 <h2>Contribution</h2>
 <p>🤝 Contributions to this project are welcome. If you find a bug or have a suggestion for a new feature, please open an issue or submit a pull request.</p>
 <p><em>Created by the user 'pedro' with password 'pedrocompany123' for managing their employees and offices.</em></p>
