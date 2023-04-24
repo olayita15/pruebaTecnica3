@@ -1,27 +1,25 @@
 <h1>Employee and Office Management Web App</h1>
-This is a simple web application built with Django that allows users to manage employees and offices. The project contains two main models, Office and Employee.
-
+<p>This is a simple web application built with Django that allows users to manage employees and offices. The project contains two main models, <strong>Office</strong> and <strong>Employee</strong>.</p>
 <h2>Office Model</h2>
-🏢 The Office model represents the different offices in the organization. It contains the following fields:
-
-name: The name of the office.
-address: The physical address of the office.
-
+<p><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/office-building_1f3e2.png" alt="Office model icon" style="vertical-align:middle"> The <strong>Office</strong> model represents the different offices in the organization. It contains the following fields:</p>
+<ul>
+  <li><strong>name:</strong> The name of the office.</li>
+  <li><strong>city:</strong> The city where the office is located.</li>
+  <li><strong>phone:</strong> The phone number of the office.</li>
+</ul>
 <h2>Employee Model</h2>
-👨‍💼 The Employee model represents the employees in the organization. It contains the following fields:
-
-first_name: The first name of the employee.
-last_name: The last name of the employee.
-email: The email address of the employee.
-phone_number: The phone number of the employee.
-office: A foreign key to the Office model, representing the office where the employee works.
-
+<p><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/business-suit-levitating_1f574.png" alt="Employee model icon" style="vertical-align:middle"> The <strong>Employee</strong> model represents the employees in the organization. It contains the following fields:</p>
+<ul>
+  <li><strong>first_name:</strong> The first name of the employee.</li>
+  <li><strong>last_name:</strong> The last name of the employee.</li>
+  <li><strong>email:</strong> The email address of the employee.</li>
+  <li><strong>phone_number:</strong> The phone number of the employee.</li>
+  <li><strong>office:</strong> A foreign key to the <strong>Office</strong> model, representing the office where the employee works.</li>
+</ul>
 <h2>Usage</h2>
-To run the application locally, you will need to have Python and Django installed on your machine. Once you have cloned the repository, navigate to the project directory and run the following command:
-
-Copy code
-python manage.py runserver
-This will start the Django development server, and you can access the application by navigating to http://localhost:8000/ in your web browser.
-
+<p>To run the application locally, you will need to have Python and Django installed on your machine. Once you have cloned the repository, navigate to the project directory and run the following command:</p>
+<pre><code>python manage.py runserver</code></pre>
+<p>This will start the Django development server, and you can access the application by navigating to <a href="http://localhost:8000/">http://localhost:8000/</a> in your web browser.</p>
 <h2>Contribution</h2>
-🤝 Contributions to this project are welcome. If you find a bug or have a suggestion for a new feature, please open an issue or submit a pull request.
+<p><img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/handshake_1f91d.png" alt="Handshake icon" style="vertical-align:middle"> Contributions to this project are welcome. If you find a bug or have a suggestion for a new feature, please open an issue or submit a pull request.</p>
+<p><em>Created by the user 'pedro' with password 'pedrocompany123' for managing their employees and offices.</em></p>
