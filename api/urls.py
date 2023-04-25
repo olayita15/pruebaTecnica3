@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import office_list_view, office_detail_view, employee_list_view, employee_detail_view
+
+from .views import home
+from .views import *
 
 
 urlpatterns = [
