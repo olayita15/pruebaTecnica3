@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Lista de oficinas</h1>
+  <ul>
+    {% for office in offices %}
+      <li><a href="{% url 'office_detail' office.pk %}">{{ office.name }}</a></li>
+    {% empty %}
+      <li>No hay oficinas registradas</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'office_create' %}">Agregar nueva oficina</a>
+{% endblock %}

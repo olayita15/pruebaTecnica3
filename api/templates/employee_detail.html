@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ employee.name }}</h1>
+  <p>Phone: {{ employee.phone }}</p>
+  <p>ID Card: {{ employee.id_card }}</p>
+  <p>Email: {{ employee.email }}</p>
+  <p>Office: {{ employee.office }}</p>
+  <a href="{% url 'employee_update' employee.pk %}">Update</a>
+  <a href="{% url 'employee_delete' employee.pk %}">Delete</a>
+{% endblock %}

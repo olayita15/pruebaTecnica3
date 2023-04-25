@@ -1,10 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Detalles de la oficina "{{ office.name }}"</h1>
-  <p>Ciudad: {{ office.city }}</p>
-  <p>Teléfono: {{ office.phone }}</p>
-  <a href="{% url 'office_update' office.pk %}">Editar</a>
+  <h1>¿Eliminar la oficina "{{ office.name }}"?</h1>
+  <p>Esta acción no se puede deshacer.</p>
   <form action="{% url 'office_delete' office.pk %}" method="POST">
     {% csrf_token %}
     <input type="submit" value="Eliminar">
