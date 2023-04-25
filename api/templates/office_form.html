@@ -2,13 +2,11 @@
 
 {% block content %}
   <h1>{% if form.instance.pk %}Editar{% else %}Crear{% endif %} oficina</h1>
-  <form method="POST" class="d-flex flex-column justify-content-center align-items-center mx-3">
-    <div class="d-flex flex-row justify-content-center align-items-center mx-3">
+  <form method="POST">
       {% csrf_token %}
       {{ form.as_p }}
-      
-    </div>
-    <input type="button" class="btn btn-primary" type="submit" value="Guardar">
+    
+    <input class="btn btn-primary" type="submit" value="Guardar">
   </form>
 {% endblock %}
 

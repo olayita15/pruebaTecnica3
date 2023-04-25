@@ -3,9 +3,9 @@
 {% block content %}
   <h1>Confirmar</h1>
   <p>¿Está seguro que quiere eliminar a este trabajador "{{ employee.name }}"?</p>
-  <form method="POST">
+  <form method="POST" action="{% url 'employee_delete' employee.pk %}">
     {% csrf_token %}
-    <input type="submit" value="Yes, delete">
+    <input type="submit" value="Eliminar">
   </form>
   <a href="{% url 'employee_detail' employee.pk %}">Cancelar</a>
 {% endblock %}
