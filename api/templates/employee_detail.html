@@ -1,11 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{{ employee.name }}</h1>
-  <p>Phone: {{ employee.phone }}</p>
-  <p>ID Card: {{ employee.id_card }}</p>
-  <p>Email: {{ employee.email }}</p>
-  <p>Office: {{ employee.office }}</p>
-  <a href="{% url 'employee_update' employee.pk %}">Update</a>
-  <a href="{% url 'employee_delete' employee.pk %}">Delete</a>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://cdn.onlinewebfonts.com/svg/img_264157.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ employee.name }}</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Télefono: {{ employee.phone }}</li>
+    <li class="list-group-item">Documento: {{ employee.id_card }}</li>
+    <li class="list-group-item">Correo: {{ employee.email }}</li>
+    <li class="list-group-item">Oficina: {{ employee.office }}</li>
+  </ul>
+  <div class="card-body">
+    <a href="{% url 'employee_update' employee.pk %}" class="card-link btn btn-warning">Editar</a>
+    <a href="{% url 'employee_delete' employee.pk %}" class="card-link btn btn-danger">Borrar</a>
+  </div>
+</div>
 {% endblock %}
