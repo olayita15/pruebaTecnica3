@@ -40,8 +40,8 @@ def Employee_update(request, pk):
             form.save()
             return redirect('employee_list')
     else:
-        form = EmployeeForm(instance=Employee)
-    return render(request, 'Employee_form.html', {'form': form})
+        form = EmployeeForm(instance=employee)
+    return render(request, 'employee_form.html', {'form': form})
 
 def Employee_delete(request, pk):
     employee = get_object_or_404(Employee, pk=pk)

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>{{ form_title }}</h1>
+<h1>{% if form.instance.pk %}Editar{% else %}Crear{% endif %} trabajador</h1>
   <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
