@@ -8,3 +8,5 @@ def base(request):
     offices = Office.objects.all()
     employees = Employee.objects.all()
     return render(request,'base.html', {'offices':offices, 'employees':employees})
+
+

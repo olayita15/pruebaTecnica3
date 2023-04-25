@@ -2,12 +2,25 @@
 
 {% block content %}
   <h1>Lista de oficinas</h1>
-  <ul>
-    {% for office in offices %}
-      <li><a href="{% url 'office_detail' office.pk %}">{{ office.name }}</a></li>
-    {% empty %}
-      <li>No hay oficinas registradas</li>
-    {% endfor %}
-  </ul>
-  <a href="{% url 'office_create' %}">Agregar nueva oficina</a>
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre de la sede</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for office in offices %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td><a href="{% url 'office_detail' office.pk %}">{{ office.name }}</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  
+
+  <a type="button" class="btn btn-primary" href="{% url 'office_create' %}">Agregar nueva oficina</a>
 {% endblock %}
