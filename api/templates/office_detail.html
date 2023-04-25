@@ -1,12 +1,24 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>Detalles de la oficina "{{ office.name }}"</h1>
-  <p>Ciudad: {{ office.city }}</p>
-  <p>Teléfono: {{ office.phone }}</p>
-  <a href="{% url 'office_update' office.pk %}">Editar</a>
-  <form action="{% url 'office_delete' office.pk %}" method="POST">
-    {% csrf_token %}
-    <input type="submit" value="Eliminar">
-  </form>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://cdn2.iconfinder.com/data/icons/leto-blue-ui-generic-1/64/ui_-45-512.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Detalles de la oficina "{{ office.name }}"</h5>
+    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Ciudad: {{ office.city }}</li>
+    <li class="list-group-item">Teléfono: {{ office.phone }}</li>
+  </ul>
+  <div class="card-body d-flex flex-row justify-content-around">
+    <a href="#" class="card-link btn btn-warning">Editar</a>
+    <form action="{% url 'office_delete' office.pk %}" method="POST">
+      {% csrf_token %}
+      <input class="btn btn-danger" type="submit" value="Eliminar">
+    </form>
+  </div>
+</div>
+
 {% endblock %}
