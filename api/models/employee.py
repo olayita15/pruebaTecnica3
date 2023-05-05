@@ -6,7 +6,7 @@ class Employee(models.Model):
     phone = models.CharField(max_length=20)
     id_card = models.CharField(max_length=20)
     email = models.EmailField()
-    office = models.ForeignKey(Office, on_delete=models.CASCADE)
+    office = models.ForeignKey(Office, on_delete=models.CASCADE, to_field='id', related_name='employees')
 
     def __str__(self):
         return self.name
